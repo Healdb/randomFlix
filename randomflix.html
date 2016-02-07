@@ -32714,6 +32714,7 @@ Storage.prototype.getObj = function(key) {
 		var div = $( ele ).parent();
 		div = $( div ).parent();
 		var title =$(div).children('h1')[1];
+		var link =$(div).children('a')[0];
 		var plot =$(div).children('p')[1];
 		console.log(title);
 		var iframe = document.createElement('iframe');
@@ -32743,7 +32744,8 @@ Storage.prototype.getObj = function(key) {
 		    $(title).text(chosene.title);
 		    $(plot).text(chosene.synopsis);
 			//location.href = "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id;
-		    div.getElementById("nlink").href="nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id
+		    $(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
+			$(link).text("Click to open episode")
         }, 1000);
   }
   </script>
