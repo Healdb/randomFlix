@@ -32711,7 +32711,7 @@ Storage.prototype.getObj = function(key) {
   	function pickrandom(ele) {
   		$("#iframe2").remove();
   		var elid=ele.id;
-		var div = (ele.parent());
+		var div = $( ele ).parent();
 		console.log(div.children());
 		var iframe = document.createElement('iframe');
 		iframe.id = 'iframe2';
