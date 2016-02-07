@@ -32713,8 +32713,9 @@ Storage.prototype.getObj = function(key) {
   		var elid=ele.id;
 		var div = $( ele ).parent();
 		div = $( div ).parent();
-		var x =$(div).children('h1');
-		console.log(x);
+		var title =$(div).children('h1')[1];
+		var plot =$(div).children('p')[1];
+		console.log(title);
 		var iframe = document.createElement('iframe');
 		iframe.id = 'iframe2';
 		iframe.style.display = 'none';
@@ -32739,10 +32740,10 @@ Storage.prototype.getObj = function(key) {
 		    console.log("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
 		    console.log(chosene.title);
 		    console.log(chosene.synopsis);
-		    $('#title').text(chosene.title);
-		    $('#plot').text(chosene.synopsis);
+		    $(title).text(chosene.title);
+		    $(plot).text(chosene.synopsis);
 			//location.href = "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id;
-		    document.getElementById("nlink").href="nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id
+		    div.getElementById("nlink").href="nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id
         }, 1000);
   }
   </script>
