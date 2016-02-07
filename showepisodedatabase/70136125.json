@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="description" content="Netflix">
+    <meta name="title" content="Netflix">
+    <link rel="shortcut icon" href="http://cdn-0.nflximg.com/en_US/icons/nficon2014.4.ico">
+    <title>Netflix</title>
+    <style>
+        #doc2{margin:auto;text-align:left;width:73.076em;*width:71.25em;min-width:750px}#bd:after{content:".";display:block;height:0;clear:both;visibility:hidden}html{font-family:arial,helvetica,sans-serif;font-size:93%;color:#333;background-color:#f3f3f3;padding:0;margin:0}body{padding:0;margin:0}.clearfix:after{content:".";display:block;font-size:0;line-height:0;height:0;clear:both;visibility:hidden}.clearfix{zoom:1}h1,h2,h3,h4,h5{margin:.5em 0 .25em}h1{font-size:182%}h2{font-size:153.9%}h3{font-size:123.1%}h4{font-size:108%}h5{font-size:93%}h1,h2,h3,h4,h5{font-weight:bold;margin:.5em 0 .25em}p,ul.bullet,ol{margin:.5em 0 .25em}ul.bullet li{list-style-type:disc}ol li{list-style-type:decimal}ol li,ul li{list-style-position:inside}strong{font-weight:bold}b{font-weight:bold}a{color:#00458b;outline:0;text-decoration:none}a:hover{text-decoration:underline}a img{border:0}caption,th{text-align:left}th,td{padding:0;border:0}address,caption,cite,code,dfn,em,th,var{font-weight:normal}.footer a,.footer a:hover{color:#fff}#hd{padding-right:369px;min-width:405px;background-color:#f9f9f9;background-color:rgba(250,250,250,0.97);border-bottom:solid 1px #b4b4b4;position:fixed;top:0;left:0;right:0;height:90px;box-sizing:border-box;z-index:15;padding-left:236px;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0);-moz-box-shadow:0 2px 2px 0 rgba(0,0,0,0);box-shadow:0 2px 2px 0 rgba(0,0,0,0);-webkit-transition:box-shadow 200ms;-moz-transition:box-shadow 200ms;-ms-transition:box-shadow 200ms;transition:box-shadow 200ms}#hd .logo{position:absolute;left:45px;top:25px}#hd .logo a{background-image:url(http://cdn-0.nflximg.com/en_us/home/logo_v7.png);background-repeat:no-repeat;display:block;width:146px;height:40px;font-size:0;line-height:0;outline:0;overflow:hidden;text-indent:-9999px}body#errorPage .member-header a.signoutLink{font-size:14px;line-height:90px;color:#e50914;text-decoration:none;position:absolute;margin-right:45px;right:0}body#errorPage .member-header #netflix{margin:0;padding:0}body#errorPage #bd.main-content{padding:90px 2.5em 1em;margin:2em 10em}body#errorPage #bd.main-content h1{padding-bottom:1em}body#errorPage #bd.main-content p{padding:.5em 0}body#errorPage #bd.main-content #serverinfo{color:#f3f3f3}body#errorPage #bd.main-content a{color:#bb000d;font-weight:bold;text-decoration:none}body#errorPage #bd.main-content a.back-btn{border:1px solid #b2b2b2;color:#3b3b3b;display:inline-block;font-weight:bold;margin-top:20px;min-width:80px;padding:5px 10px;text-align:center;text-decoration:none;background:url("http://cdn-0.nflximg.com/en_us/buttons/v7/bg.png") repeat-x scroll 0 9px transparent}    </style>
+</head>
+<body id="errorPage">
+<div id="doc2">
+    <div id="hd">
+        <div id="header" class="member-header clearfix">
+            <h1 id="netflix" class="logo">
+                <a href="/WiHome" title="Netflix">Netflix</a>
+            </h1>
+            <a class="signoutLink" href="/SignOut" target="_top">Sign Out</a>
+        </div>
+    </div>
+    <div id="bd" class="main-content">
+
+        <h1>Netflix Site Error</h1>
+        <p>We were unable to process your request.</p>
+        <p>Please go to the Netflix home page by clicking the button below.</p>
+        <a href="/WiHome" class="back-btn">Netflix Home</a>
+        <p id="serverinfo">ZUUL</p>
+    </div>
+</div>
+</body>
+</html>
