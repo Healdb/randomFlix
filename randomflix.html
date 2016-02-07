@@ -32712,6 +32712,7 @@ Storage.prototype.getObj = function(key) {
   		$("#iframe2").remove();
   		var elid=ele.id;
 		var div = $( ele ).parent();
+		div = $( div ).parent();
 		console.log(div.children());
 		var iframe = document.createElement('iframe');
 		iframe.id = 'iframe2';
@@ -32737,7 +32738,7 @@ Storage.prototype.getObj = function(key) {
 		    console.log("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
 		    console.log(chosene.title);
 		    console.log(chosene.synopsis);
-		    $('#70158329').href("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
+		    //$('#70158329').href("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
 		    //$('#plot').text(chosene.synopsis);
 			location.href = "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id;
 		    //document.getElementById("70158329").href="nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id
