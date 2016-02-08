@@ -32723,6 +32723,7 @@ Storage.prototype.getObj = function(key) {
 		var plot =$(div).children('p')[1];
 		$(title).text("Loading...");
 		$(plot).text("Please Wait...");
+		$(link).text("");
 		console.log(title);
 		var iframe = document.createElement('iframe');
 		iframe.id = 'iframe2';
@@ -32745,16 +32746,21 @@ Storage.prototype.getObj = function(key) {
 		    var episodescount = count[randseason];
 		    var randepisode=Math.floor((Math.random() * episodescount)+1);
 		    var chosene=seasons[randseason]["episodes"][randepisode];
-		    console.log("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
-		    console.log(chosene.title);
-		    console.log(chosene.synopsis);
-		    $(title).text(chosene.title);
-		    $(plot).text(chosene.synopsis);
-			//location.href = "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id;
-			$(link).addClass("external");
-		    $(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
-			$(link).text("Click to open episode")
-			myApp.hidePreloader();
+			try{
+				console.log("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
+				console.log(chosene.title);
+				console.log(chosene.synopsis);
+				$(title).text(chosene.title);
+				$(plot).text(chosene.synopsis);
+				//location.href = "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id;
+				$(link).addClass("external");
+				$(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
+				$(link).text("Click to open episode")
+			}
+			catch(err){
+				$(title).text("ERROR");
+				$(plot).text("Please Try Again");
+			}
         }, 1000);
   }
   </script>
