@@ -32711,6 +32711,7 @@ Storage.prototype.getObj = function(key) {
 	</script>
 	<script>
   	function pickrandom(ele) {
+		console.log("pressed");
 		var myApp = new Framework7();
 		myApp.showIndicator();
   		$("#iframe2").remove();
@@ -32751,9 +32752,7 @@ Storage.prototype.getObj = function(key) {
 			$(link).addClass("external");
 		    $(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
 			$(link).text("Click to open episode")
-			setTimeout(function () {
-				myApp.hidePreloader();
-			}, 100);
+			myApp.hidePreloader();
         }, 1000);
   }
   </script>
