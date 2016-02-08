@@ -32656,6 +32656,7 @@ Storage.prototype.getObj = function(key) {
 	<script>
 	var myApp = new Framework7();
 	$(document).ready(function(){
+		$( ".favorites" ).append('<p>Loading... Please Wait...</p>');
 		var favoriteID=localStorage.getObj("favoriteID");
 		var favoriteName=localStorage.getObj("favoriteName");
 		$( ".favorites" ).empty();
