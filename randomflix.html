@@ -32721,6 +32721,8 @@ Storage.prototype.getObj = function(key) {
 		var title =$(div).children('h1')[1];
 		var link =$(div).children('a')[0];
 		var plot =$(div).children('p')[1];
+		$(title).text("Loading...");
+		$(plot).text("Please Wait...");
 		console.log(title);
 		var iframe = document.createElement('iframe');
 		iframe.id = 'iframe2';
