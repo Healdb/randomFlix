@@ -32689,6 +32689,7 @@ Storage.prototype.getObj = function(key) {
 				localStorage.setObj("favoriteID", favoriteID);
 				localStorage.setObj("favoriteName", favoriteName);
 				console.log("Pushed before, add new favorite.");
+				myApp.alert('Success!', 'This title has been added to your favorites!');
 			}
 		}
 		catch(err){
@@ -32697,6 +32698,7 @@ Storage.prototype.getObj = function(key) {
 			var favoriteName=[clickedName];
 			localStorage.setObj("favoriteID", favoriteID);
 			localStorage.setObj("favoriteName", favoriteName);
+			myApp.alert('Success!', 'This title has been added to your favorites!');
 		}
 		var favoriteID=localStorage.getObj("favoriteID");
 		var favoriteName=localStorage.getObj("favoriteName");
@@ -32750,9 +32752,7 @@ Storage.prototype.getObj = function(key) {
 		    $(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
 			$(link).text("Click to open episode")
         }, 1000);
-		setTimeout(function () {
         myApp.hidePreloader();
-		}, 2000);
   }
   </script>
   
