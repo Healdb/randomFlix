@@ -32727,7 +32727,7 @@ Storage.prototype.getObj = function(key) {
 		var iframe = document.getElementById('iframe2');
 		console.log(iframe.src);
 		console.log($(iframe).contents().find("pre").text());
-        setTimeout(function(){
+        //setTimeout(function(){
 			file=document.getElementById('iframe2').contentDocument.body.firstChild.innerHTML;
 			file =JSON.parse(file);
 			var seasons=file["video"]["seasons"];
@@ -32749,7 +32749,7 @@ Storage.prototype.getObj = function(key) {
 			$(link).addClass("external");
 		    $(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
 			$(link).text("Click to open episode")
-        }, 1000);
+        //}, 1000);
 		//myApp.hideIndicator()
   }
   </script>
