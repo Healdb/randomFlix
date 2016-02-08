@@ -32713,9 +32713,10 @@ Storage.prototype.getObj = function(key) {
 	var $$ = Dom7;
 	 
 	$$('.swipeout').on('deleted', function () {
+		console.log("hey");
 		var favoriteID=localStorage.getObj("favoriteID");
 		var favoriteName=localStorage.getObj("favoriteName");
-		console.log(jQuery(this).attr("id"));
+		alert(jQuery(this).attr("id"));
 	}); 
 	</script>
 	<script>
