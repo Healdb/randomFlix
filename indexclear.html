@@ -173,9 +173,7 @@ Storage.prototype.getObj = function(key) {
         setTimeout(function(){
 			file=document.getElementById('iframe3').contentDocument.body.firstChild.innerHTML;
 			file=file.split("\n");
-			console.log(file.length);
 			for(i=0;i<file.length;i++){
-				console.log(currentShow);
 				currentShow=file[i].split("($)");
 				currentTitle= currentShow[0];
 				currentID=currentShow[1];
