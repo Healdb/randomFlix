@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)file:///C:/Users/healdb/Downloads/Framework7-1.4.0/Framework7-1.4.0/examples/inline-pages/randomflix.html -->
+<html class="pixel-ratio-2 retina ios ios-9 ios-9-1 ios-gt-8 ios-gt-7 ios-gt-6 watch-active-state pixel-ratio-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Random Flix</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="./randomflix_files/framework7.ios.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./randomflix_files/my-app.css">
+  </head>
+  <body class="">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main" data-page="index">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <!-- Navbar inner for Index page-->
+          <div data-page="index" class="navbar-inner navbar-on-center">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding" style="left: 101px; transform: translate3d(0px, 0px, 0px);">Random Flix</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#search" class="link"><p>Search</p></a>
+            </div>
+          </div>
+          <!-- Navbar inner for About page-->
+          
+          <!-- Navbar inner for Services page-->
+          
+          <!-- Navbar inner for Form page-->
+       
+		  		 
+		 <div data-page="80021967" class="navbar-inner cached">
+<div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="#" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div>
+<div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">Águila Roja</div>
+<div class="right"><!-- Right link contains only icon - additional "icon-only" class--><a href="#80021967" id="Águila Roja" class="link"><p>Add To Favorites</p></a>
+</div>
+</div>
+
+
+
+
+
+
+		  </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page page-on-center">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block-title">Random Flix</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <p class="">Search for new show or select a favorite!</p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="content-block-title">Favorite Shows</div>
+              <div class="list-block">
+                <ul class="favorites">
+                  
+                </ul>
+              </div>
+              
+              
+            </div>
+          </div>
+		  
+          <!-- About Page-->
+          
+          <!-- Services Page-->
+          
+          <!-- Form Page-->
+          
+        <div data-page="services" class="page cached">
+            <div class="page-content">
+            </div>
+          </div>
+
+
+
+		  <div data-page="about" class="page cached">
+            <div class="page-content">
+              <div class="content-block">
+
+              </div>
+            <div class="content-block">
+                
+              </div></div>
+			  
+          </div>
+		  
+		  <div data-page="form" class="page cached">
+            <div class="page-content">
+             
+            </div>
+          </div>
+		  <div data-page="search" class="page cached">
+					 <!-- Search Bar -->
+			<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+				<div class="searchbar-input">
+					<input type="search" placeholder="Search">
+					<a href="#" class="searchbar-clear"></a>
+				</div>
+				<a href="#" class="searchbar-cancel">Cancel</a>
+			</form>
+			
+			<!-- Search Bar overlay-->
+			<div class="searchbar-overlay"></div>
+			
+			<!-- Page content -->
+			<div class="page-content">
+				<div class="content-block searchbar-not-found">
+						Nothing found
+				</div>
+		 
+				<div class="list-block list-block-search searchbar-found">
+					<ul>
+						
+
+
+					</ul>
+				</div>
+			</div>
+            <div class="page-content">
+            </div>
+          </div></div>
+        <!-- Bottom Toolbar-->
+        
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="./randomflix_files/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="./randomflix_files/my-app.js"></script>
+	<script>
+	Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+	</script>
+	<script>
+	var myApp = new Framework7();
+	$(document).ready(function(){
+		var favoriteID=localStorage.getObj("favoriteID");
+		var favoriteName=localStorage.getObj("favoriteName");
+		$( ".favorites" ).empty();
+		for(i=0;i<favoriteID.length;i++){
+			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
+		}
+	}) 
+
+	</script>
+	<script>
+	var myApp = new Framework7();
+	$( ".link" ).click(function() {
+	  var clickedID =String(jQuery(this).attr("href"));
+	  var contentPanelId = jQuery(this).attr("id");
+	  var clickedName=String(jQuery(this).attr("id"));
+	  clickedID =clickedID.slice(1,clickedID.length);
+	  console.log(clickedID);
+	  console.log(clickedName);
+	  console.log(!isNaN(clickedID));
+	  if(!isNaN(clickedID) && clickedID!=""){
+		try{
+			var favoriteID=localStorage.getObj("favoriteID");
+			var favoriteName=localStorage.getObj("favoriteName");
+			if($.inArray(clickedID, favoriteID)!=-1){
+				console.log("already in array.")
+				myApp.alert('Please try adding another title.', 'This title is already in your favorites!');
+			}
+			else{
+				favoriteID.push(clickedID);
+				favoriteName.push(clickedName);
+				localStorage.setObj("favoriteID", favoriteID);
+				localStorage.setObj("favoriteName", favoriteName);
+				console.log("Pushed before, add new favorite.");
+				myApp.alert('This title has been added to your favorites!','Success!');
+			}
+		}
+		catch(err){
+			console.log("Never pushed before");
+			var favoriteID=[clickedID];
+			var favoriteName=[clickedName];
+			localStorage.setObj("favoriteID", favoriteID);
+			localStorage.setObj("favoriteName", favoriteName);
+			myApp.alert('This title has been added to your favorites!','Success!');
+		}
+		var favoriteID=localStorage.getObj("favoriteID");
+		var favoriteName=localStorage.getObj("favoriteName");
+		$( ".favorites" ).empty();
+		for(i=0;i<favoriteID.length;i++){
+			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
+		}
+	  }
+	});
+	</script>
+	<script>
+  	function pickrandom(ele) {
+		console.log("pressed");
+		//var myApp = new Framework7();
+		//myApp.showIndicator();
+  		$("#iframe2").remove();
+  		var elid=ele.id;
+		var div = $( ele ).parent();
+		div = $( div ).parent();
+		var title =$(div).children('h1')[1];
+		var link =$(div).children('a')[0];
+		var plot =$(div).children('p')[1];
+		$(title).text("Loading...");
+		$(plot).text("Please Wait...");
+		$(link).text("");
+		console.log(title);
+		var iframe = document.createElement('iframe');
+		iframe.id = 'iframe2';
+		iframe.style.display = 'none';
+		document.body.appendChild(iframe);
+		iframe.src = 'showepisodedatabase/'+elid+'.json';
+		var iframe = document.getElementById('iframe2');
+		console.log(iframe.src);
+		console.log($(iframe).contents().find("pre").text());
+        setTimeout(function(){
+			file=document.getElementById('iframe2').contentDocument.body.firstChild.innerHTML;
+			file =JSON.parse(file);
+			var seasons=file["video"]["seasons"];
+			var  arrayLength=seasons.length;
+		    var count=[];
+		    for (var i = 0; i < arrayLength; i++) {
+				count.push(seasons[i]["episodes"].length);
+		    }
+		    var randseason=Math.floor((Math.random() * count.length));
+		    var episodescount = count[randseason];
+		    var randepisode=Math.floor((Math.random() * episodescount)+1);
+		    var chosene=seasons[randseason]["episodes"][randepisode];
+			try{
+				console.log("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
+				console.log(chosene.title);
+				console.log(chosene.synopsis);
+				$(title).text(chosene.title);
+				$(plot).text(chosene.synopsis);
+				//location.href = "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id;
+				$(link).addClass("external");
+				$(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
+				$(link).text("Click to open episode")
+			}
+			catch(err){
+				$(title).text("ERROR");
+				$(plot).text("Please Try Again");
+			}
+        }, 1000);
+  }
+  </script>
+  <script src="jquery-1.10.2.js"></script>
+	<script src="inobounce.js"></script>
+  
+</body></html>
