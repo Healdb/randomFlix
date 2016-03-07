@@ -176,7 +176,13 @@ Storage.prototype.getObj = function(key) {
 		for(i=0;i<favoriteID.length;i++){
 			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
 		}
-		var iframe = document.createElement('iframe');
+	}); 
+	generate();
+	</script>
+
+	<script>
+	function generate(){
+	var iframe = document.createElement('iframe');
 		iframe.id = 'iframe3';
 		iframe.style.display = 'none';
 		document.body.appendChild(iframe);
@@ -196,10 +202,8 @@ Storage.prototype.getObj = function(key) {
 				$( ".searchList" ).append( '<li id="'+currentID+'"><a href="#'+currentID+'" class="item-link item-content"><div class="item-inner"><div class="item-title">'+currentTitle+'</div></div></a></li>');
 			}
         }, 1000);
-	}) 
-
+	}
 	</script>
-	
 	<script>
 	var myApp = new Framework7();
 	$( ".link" ).click(function() {
@@ -242,6 +246,7 @@ Storage.prototype.getObj = function(key) {
 			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
 		}
 	  }
+	  generate();
 	});
 	</script>
 	<script>
