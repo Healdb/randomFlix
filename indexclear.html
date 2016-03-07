@@ -164,9 +164,23 @@ Storage.prototype.getObj = function(key) {
 		for(i=0;i<favoriteID.length;i++){
 			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
 		}
+		var iframe = document.createElement('iframe');
+		iframe.id = 'iframe3';
+		iframe.style.display = 'none';
+		document.body.appendChild(iframe);
+		iframe.src = 'showtitles.txt';
+		var iframe = document.getElementById('iframe3');
+        setTimeout(function(){
+			file=document.getElementById('iframe3').contentDocument.body.firstChild.innerHTML;
+			file=file.split("\n");
+			for(i=0;i<file.length;i++){
+				console.log(file[i]);
+			}
+        }, 1000);
 	}) 
 
 	</script>
+	
 	<script>
 	var myApp = new Framework7();
 	$( ".link" ).click(function() {
@@ -233,8 +247,6 @@ Storage.prototype.getObj = function(key) {
 		document.body.appendChild(iframe);
 		iframe.src = 'showepisodedatabase/'+elid+'.json';
 		var iframe = document.getElementById('iframe2');
-		console.log(iframe.src);
-		console.log($(iframe).contents().find("pre").text());
         setTimeout(function(){
 			file=document.getElementById('iframe2').contentDocument.body.firstChild.innerHTML;
 			file =JSON.parse(file);
