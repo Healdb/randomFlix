@@ -129,7 +129,7 @@
 				</div>
 		 
 				<div class="list-block list-block-search searchbar-found">
-					<ul>
+					<ul class="searchList">
 						
 
 
@@ -174,7 +174,10 @@ Storage.prototype.getObj = function(key) {
 			file=document.getElementById('iframe3').contentDocument.body.firstChild.innerHTML;
 			file=file.split("\n");
 			for(i=0;i<file.length;i++){
-				console.log(file[i]);
+				currentShow=file[i].split("($)");
+				currentTitle= currentShow[0];
+				currentID=currentShow[1];
+				$( ".searchList" ).append( '<li id="'+currentID+'"><a href="#'+currentID+'" class="item-link item-content"><div class="item-inner"><div class="item-title">'+currentTitle+'</div></div></a></li>')
 			}
         }, 1000);
 	}) 
