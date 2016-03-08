@@ -147,6 +147,7 @@ Storage.prototype.getObj = function(key) {
 	</script>
 	<script>
 	function generate(){
+		var myApp = new Framework7();
 		console.log("Running generate..");
 		var iframe = document.createElement('iframe');
 		iframe.id = 'iframe3';
@@ -169,6 +170,10 @@ Storage.prototype.getObj = function(key) {
 			}
 			console.log("Generate Complete");
         	}, 1000);
+        	myApp.showIndicator();
+    		setTimeout(function () {
+        		myApp.hideIndicator();
+    		}, 2000);
 	}
 	</script>
 	<script>
