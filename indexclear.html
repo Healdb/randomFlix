@@ -173,8 +173,10 @@ Storage.prototype.getObj = function(key) {
 	</script>
 	<script>
 	function replace(ele){
-		console.log(ele.id);
-		console.log(ele.name);
+		var currentID = ele.id;
+		var currentTitle = ele.name;
+		$(".navbar").append('<div data-page="'+currentID+'" class="navbar-inner cached"><div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="#" onclick="replace(this);" id="'+currentID+'" name="'+currentTitle+'" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div><div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">'+currentTitle+'</div><div class="right"><!-- Right link contains only icon - additional "icon-only" class--><a href="#'+currentID+'" id="'+currentTitle+'" onclick="addFavorite(this);" class="link"><p>Add To Favorites</p></a></div></div>');
+		$(".test").append('<div data-page="'+currentID+'" class="page cached"><div class="page-content"><center><h1>'+currentTitle+'</h1><BR><p><a href="#" id="'+currentID+'" onclick="pickrandom(this);" class="button button-round active">Play Random Episode</a></p><BR><h1 id="title"></h1><p id="plot"></p><a id="nlink" href="#"></a></div></center></div>');
 	}
 	</script>
 	<script>
