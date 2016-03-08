@@ -215,8 +215,8 @@ Storage.prototype.getObj = function(key) {
 	  console.log(clickedID);
 	  console.log(clickedName);
 	  console.log(!isNaN(clickedID));
-	  myApp.showIndicator();
 	  if(!isNaN(clickedID) && clickedID!=""){
+	  	myApp.showIndicator();
 		try{
 			var favoriteID=localStorage.getObj("favoriteID");
 			var favoriteName=localStorage.getObj("favoriteName");
