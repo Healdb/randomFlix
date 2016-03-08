@@ -202,6 +202,7 @@ Storage.prototype.getObj = function(key) {
 				$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
 			}
 			generate();
+		}
 		catch(err){
 			console.log(err);
 			generate();	
