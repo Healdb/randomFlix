@@ -197,10 +197,15 @@ Storage.prototype.getObj = function(key) {
 		var favoriteID=localStorage.getObj("favoriteID");
 		var favoriteName=localStorage.getObj("favoriteName");
 		$( ".favorites" ).empty();
-		for(i=0;i<favoriteID.length;i++){
-			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
+		try{
+			for(i=0;i<favoriteID.length;i++){
+				$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
+			}
+			generate();
+		catch(err){
+			console.log(err);
+			generate();	
 		}
-		generate();
 	}); 
 	</script>
 	
