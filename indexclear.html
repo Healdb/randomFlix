@@ -183,7 +183,7 @@ Storage.prototype.getObj = function(key) {
 				currentTitle= currentShow[0];
 				currentID=currentShow[1];
 				//console.log(currentTitle);
-				$(".navbar").append('<div data-page="'+currentID+'" class="navbar-inner cached"><div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="#" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div><div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">'+currentTitle+'</div><div class="right"><!-- Right link contains only icon - additional "icon-only" class--><a href="#'+currentID+'" id="'+currentTitle+'" class="link"><p>Add To Favorites</p></a></div></div>');
+				$(".navbar").append('<div data-page="'+currentID+'" class="navbar-inner cached"><div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="#" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div><div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">'+currentTitle+'</div><div class="right"><!-- Right link contains only icon - additional "icon-only" class--><a href="#'+currentID+'" id="'+currentTitle+'" onclick="addFavorite(this);" class="link"><p>Add To Favorites</p></a></div></div>');
 				
 				$(".test").append('<div data-page="'+currentID+'" class="page cached"><div class="page-content"><center><h1>'+currentTitle+'</h1><BR><p><a href="#" id="'+currentID+'" onclick="pickrandom(this);" class="button button-round active">Play Random Episode</a></p><BR><h1 id="title"></h1><p id="plot"></p><a id="nlink" href="#"></a></div></center></div>');
 				$( ".searchList" ).append( '<li id="'+currentID+'"><a href="#'+currentID+'" class="item-link item-content"><div class="item-inner"><div class="item-title">'+currentTitle+'</div></div></a></li>');
@@ -254,6 +254,50 @@ Storage.prototype.getObj = function(key) {
 		}
 	  }
 	});
+	</script>
+	<script>
+	function addFavorite(this){
+	  var myApp = new Framework7();
+	  var clickedID =String(jQuery(this).attr("href"));
+	  var contentPanelId = jQuery(this).attr("id");
+	  var clickedName=String(jQuery(this).attr("id"));
+	  clickedID =clickedID.slice(1,clickedID.length);
+	  console.log(clickedID);
+	  console.log(clickedName);
+	  console.log(!isNaN(clickedID));
+	  if(!isNaN(clickedID) && clickedID!=""){
+		try{
+			var favoriteID=localStorage.getObj("favoriteID");
+			var favoriteName=localStorage.getObj("favoriteName");
+			if($.inArray(clickedID, favoriteID)!=-1){
+				console.log("already in array.")
+				myApp.alert('Please try adding another title.', 'This title is already in your favorites!');
+			}
+			else{
+				favoriteID.push(clickedID);
+				favoriteName.push(clickedName);
+				localStorage.setObj("favoriteID", favoriteID);
+				localStorage.setObj("favoriteName", favoriteName);
+				console.log("Pushed before, add new favorite.");
+				myApp.alert('This title has been added to your favorites!','Success!');
+			}
+		}
+		catch(err){
+			console.log("Never pushed before");
+			var favoriteID=[clickedID];
+			var favoriteName=[clickedName];
+			localStorage.setObj("favoriteID", favoriteID);
+			localStorage.setObj("favoriteName", favoriteName);
+			myApp.alert('This title has been added to your favorites!','Success!');
+		}
+		var favoriteID=localStorage.getObj("favoriteID");
+		var favoriteName=localStorage.getObj("favoriteName");
+		$( ".favorites" ).empty();
+		for(i=0;i<favoriteID.length;i++){
+			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
+		}
+	  }
+	}
 	</script>
 	<script>
   	function pickrandom(ele) {
