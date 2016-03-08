@@ -232,7 +232,8 @@ Storage.prototype.getObj = function(key) {
 		for(i=0;i<favoriteID.length;i++){
 			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
 		}
-		console.log("Running generate data pages..");
+	  }
+	  console.log("Running generate data pages..");
 		var iframe = document.createElement('iframe');
 		iframe.id = 'iframe3';
 		iframe.style.display = 'none';
@@ -254,7 +255,6 @@ Storage.prototype.getObj = function(key) {
 			}
         	}, 1000);
         	console.log("Generate data pages Complete");
-	  }
 	});
 	</script>
 	<script>
