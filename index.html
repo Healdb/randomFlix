@@ -174,7 +174,7 @@ Storage.prototype.getObj = function(key) {
         	myApp.showIndicator();
     		setTimeout(function () {
         		myApp.hideIndicator();
-    		}, 2000);
+    		}, 4000);
 	}
 	</script>
 	<script>
@@ -215,12 +215,14 @@ Storage.prototype.getObj = function(key) {
 	  console.log(clickedID);
 	  console.log(clickedName);
 	  console.log(!isNaN(clickedID));
+	  myApp.showIndicator();
 	  if(!isNaN(clickedID) && clickedID!=""){
 		try{
 			var favoriteID=localStorage.getObj("favoriteID");
 			var favoriteName=localStorage.getObj("favoriteName");
 			if($.inArray(clickedID, favoriteID)!=-1){
 				console.log("already in array.")
+				myApp.hideIndicator();
 				myApp.alert('Please try adding another title.', 'This title is already in your favorites!');
 			}
 			else{
@@ -229,6 +231,7 @@ Storage.prototype.getObj = function(key) {
 				localStorage.setObj("favoriteID", favoriteID);
 				localStorage.setObj("favoriteName", favoriteName);
 				console.log("Pushed before, add new favorite.");
+				myApp.hideIndicator();
 				myApp.alert('This title has been added to your favorites!','Success!');
 			}
 		}
@@ -238,6 +241,7 @@ Storage.prototype.getObj = function(key) {
 			var favoriteName=[clickedName];
 			localStorage.setObj("favoriteID", favoriteID);
 			localStorage.setObj("favoriteName", favoriteName);
+			myApp.hideIndicator();
 			myApp.alert('This title has been added to your favorites!','Success!');
 		}
 		var favoriteID=localStorage.getObj("favoriteID");
