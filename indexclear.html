@@ -147,6 +147,7 @@ Storage.prototype.getObj = function(key) {
 	</script>
 	<script>
 	function generate(){
+		console.log("Running generate..");
 		var iframe = document.createElement('iframe');
 		iframe.id = 'iframe3';
 		iframe.style.display = 'none';
@@ -167,6 +168,7 @@ Storage.prototype.getObj = function(key) {
 				$( ".searchList" ).append( '<li id="'+currentID+'"><a href="#'+currentID+'" class="item-link item-content"><div class="item-inner"><div class="item-title">'+currentTitle+'</div></div></a></li>');
 			}
         	}, 1000);
+        	console.log("Generate Complete");
 	}
 	</script>
 	<script>
@@ -176,15 +178,14 @@ Storage.prototype.getObj = function(key) {
 		var favoriteName=localStorage.getObj("favoriteName");
 		$( ".favorites" ).empty();
 		try{
+			generate();
 			for(i=0;i<favoriteID.length;i++){
 				$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
 			}
 		}
 		catch(err){
-			console.log(err);
-		}
-		finally{
 			generate();
+			console.log(err);
 		}
 	})
 	</script>
