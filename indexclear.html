@@ -178,14 +178,15 @@ Storage.prototype.getObj = function(key) {
 		var favoriteName=localStorage.getObj("favoriteName");
 		$( ".favorites" ).empty();
 		try{
-			generate();
 			for(i=0;i<favoriteID.length;i++){
 				$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
 			}
 		}
 		catch(err){
-			generate();
 			console.log(err);
+		}
+		finally{
+			generate();	
 		}
 	})
 	</script>
@@ -231,6 +232,28 @@ Storage.prototype.getObj = function(key) {
 		for(i=0;i<favoriteID.length;i++){
 			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
 		}
+		console.log("Running generate data pages..");
+		var iframe = document.createElement('iframe');
+		iframe.id = 'iframe3';
+		iframe.style.display = 'none';
+		document.body.appendChild(iframe);
+		iframe.src = 'showtitles.txt';
+		var iframe = document.getElementById('iframe3');
+        	setTimeout(function(){
+			file=document.getElementById('iframe3').contentDocument.body.firstChild.innerHTML;
+			file=file.split("\n");
+			for(i=0;i<file.length;i++){
+				currentShow=file[i].split("($)");
+				currentTitle= currentShow[0];
+				currentID=currentShow[1];
+				//console.log(currentTitle);
+				//$(".navbar").append('<div data-page="'+currentID+'" class="navbar-inner cached"><div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="#" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div><div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">'+currentTitle+'</div><div class="right"><!-- Right link contains only icon - additional "icon-only" class--><a href="#'+currentID+'" id="'+currentTitle+'" onclick="addFavorite(this);" class="link"><p>Add To Favorites</p></a></div></div>');
+				
+				$(".test").append('<div data-page="'+currentID+'" class="page cached"><div class="page-content"><center><h1>'+currentTitle+'</h1><BR><p><a href="#" id="'+currentID+'" onclick="pickrandom(this);" class="button button-round active">Play Random Episode</a></p><BR><h1 id="title"></h1><p id="plot"></p><a id="nlink" href="#"></a></div></center></div>');
+				//$( ".searchList" ).append( '<li id="'+currentID+'"><a href="#'+currentID+'" class="item-link item-content"><div class="item-inner"><div class="item-title">'+currentTitle+'</div></div></a></li>');
+			}
+        	}, 1000);
+        	console.log("Generate data pages Complete");
 	  }
 	});
 	</script>
