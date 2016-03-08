@@ -234,11 +234,11 @@ Storage.prototype.getObj = function(key) {
 	});
 	</script>
 	<script>
-	function addFavorite(this){
+	function addFavorite(ele){
 	  var myApp = new Framework7();
-	  var clickedID =String(jQuery(this).attr("href"));
-	  var contentPanelId = jQuery(this).attr("id");
-	  var clickedName=String(jQuery(this).attr("id"));
+	  var clickedID =String(jQuery(ele).attr("href"));
+	  var contentPanelId = jQuery(ele).attr("id");
+	  var clickedName=String(jQuery(ele).attr("id"));
 	  clickedID =clickedID.slice(1,clickedID.length);
 	  console.log(clickedID);
 	  console.log(clickedName);
