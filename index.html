@@ -170,10 +170,9 @@
       <script>
          //var myApp = new Framework7();
          $(document).ready(function(){
-         	try{
-         		var myApp = localStorage.getObj("frame7");
-         	}
-         	catch(err){
+         	var myApp = localStorage.getObj("frame7");
+         	if(myApp==null){
+         	   console.log("Never visited before.");
          		var myApp = new Framework7();
          		localStorage.setObj("frame7", myApp);
          	}
