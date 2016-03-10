@@ -1,354 +1,342 @@
 <!DOCTYPE html>
 <!-- saved from url=(0105)file:///C:/Users/healdb/Downloads/Framework7-1.4.0/Framework7-1.4.0/examples/inline-pages/randomflix.html -->
-<html class="pixel-ratio-2 retina ios ios-9 ios-9-1 ios-gt-8 ios-gt-7 ios-gt-6 watch-active-state pixel-ratio-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Random Flix</title>
-    <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="randomflix_files/framework7.ios.min.css">
-    <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="randomflix_files/my-app.css">
-	  <script src="jquery-1.10.2.js"></script>
-	<script src="inobounce.js"></script>
-  </head>
-  <body class="">
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar-overlay"></div>
-    <!-- Panels overlay-->
-    <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
-    <BR>
-    <!-- Views-->
-    <div class="views">
-      <!-- Your main view, should have "view-main" class-->
-      <div class="view view-main" data-page="index">
-        <!-- Top Navbar-->
-        <div class="navbar">
-          <!-- Navbar inner for Index page-->
-          <div data-page="index" class="navbar-inner navbar-on-center">
-            <!-- We have home navbar without left link-->
-            <div class="center sliding" style="left: 101px; transform: translate3d(0px, 0px, 0px);">Random Flix</div>
-            <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#search" class="link"><p>Search</p></a>
+<html class="pixel-ratio-2 retina ios ios-9 ios-9-1 ios-gt-8 ios-gt-7 ios-gt-6 watch-active-state pixel-ratio-1">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <title>Random Flix</title>
+      <!-- Path to Framework7 Library CSS-->
+      <link rel="stylesheet" href="randomflix_files/framework7.ios.min.css">
+      <!-- Path to your custom app styles-->
+      <link rel="stylesheet" href="randomflix_files/my-app.css">
+      <script src="jquery-1.10.2.js"></script>
+      <script src="inobounce.js"></script>
+   </head>
+   <body class="">
+      <!-- Status bar overlay for fullscreen mode-->
+      <div class="statusbar-overlay"></div>
+      <!-- Panels overlay-->
+      <div class="panel-overlay"></div>
+      <!-- Left panel with reveal effect-->
+      <BR>
+      <!-- Views-->
+      <div class="views">
+         <!-- Your main view, should have "view-main" class-->
+         <div class="view view-main" data-page="index">
+            <!-- Top Navbar-->
+            <div class="navbar">
+               <!-- Navbar inner for Index page-->
+               <div data-page="index" class="navbar-inner navbar-on-center">
+                  <!-- We have home navbar without left link-->
+                  <div class="center sliding" style="left: 101px; transform: translate3d(0px, 0px, 0px);">Random Flix</div>
+                  <div class="right">
+                     <!-- Right link contains only icon - additional "icon-only" class-->
+                     <a href="#search" class="link">
+                        <p>Search</p>
+                     </a>
+                  </div>
+               </div>
+               <!-- Navbar inner for About page-->
+               <!-- Navbar inner for Services page-->
+               <!-- Navbar inner for Form page-->
+               <div data-page="search" class="navbar-inner cached">
+                  <div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="file:///C:/Users/healdb/Downloads/Framework7-1.4.0/Framework7-1.4.0/examples/inline-pages/index.html#" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div>
+                  <div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">Search</div>
+               </div>
             </div>
-          </div>
-          <!-- Navbar inner for About page-->
-          
-          <!-- Navbar inner for Services page-->
-          
-          <!-- Navbar inner for Form page-->
-       <div data-page="search" class="navbar-inner cached">
-            <div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="file:///C:/Users/healdb/Downloads/Framework7-1.4.0/Framework7-1.4.0/examples/inline-pages/index.html#" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div>
-            <div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">Search</div>
-          </div>
-
-		  </div>
-        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-through toolbar-through">
-          <!-- Index Page-->
-          <div data-page="index" class="page page-on-center">
-            <!-- Scrollable page content-->
-            <div class="page-content">
-              <div class="content-block-title">Random Flix</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p class="">Search for new show or select a favorite!</p>
-                  <p></p>
-                </div>
-              </div>
-              <div class="content-block-title">Favorite Shows</div>
-              <div class="list-block">
-                <ul class="favorites">
-                  
-                </ul>
-              </div>
-              
-              
+            <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+               <!-- Index Page-->
+               <div data-page="index" class="page page-on-center">
+                  <!-- Scrollable page content-->
+                  <div class="page-content">
+                     <div class="content-block-title">Random Flix</div>
+                     <div class="content-block">
+                        <div class="content-block-inner">
+                           <p class="">Search for new show or select a favorite!</p>
+                           <p></p>
+                        </div>
+                     </div>
+                     <div class="content-block-title">Favorite Shows</div>
+                     <div class="list-block">
+                        <ul class="favorites">
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <!-- About Page-->
+               <!-- Services Page-->
+               <!-- Form Page-->
+               <div data-page="services" class="page cached">
+                  <div class="page-content">
+                  </div>
+               </div>
+               <div class="test">
+               </div>
+               <div data-page="about" class="page cached">
+                  <div class="page-content">
+                     <div class="content-block">
+                     </div>
+                     <div class="content-block">
+                     </div>
+                  </div>
+               </div>
+               <div data-page="form" class="page cached">
+                  <div class="page-content">
+                  </div>
+               </div>
+               <div data-page="search" class="page cached">
+                  <!-- Search Bar -->
+                  <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+                     <div class="searchbar-input">
+                        <input type="search" placeholder="Search">
+                        <a href="#" class="searchbar-clear"></a>
+                     </div>
+                     <a href="#" class="searchbar-cancel">Cancel</a>
+                  </form>
+                  <!-- Search Bar overlay-->
+                  <div class="searchbar-overlay"></div>
+                  <!-- Page content -->
+                  <div class="page-content">
+                     <div class="content-block searchbar-not-found">
+                        Nothing found
+                     </div>
+                     <div class="list-block list-block-search searchbar-found">
+                        <ul class="searchList">
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="page-content">
+                  </div>
+               </div>
             </div>
-          </div>
-		  
-          <!-- About Page-->
-          
-          <!-- Services Page-->
-          
-          <!-- Form Page-->
-          
-        <div data-page="services" class="page cached">
-            <div class="page-content">
-            </div>
-          </div>
-<div class="test">
-
-
-</div>
-
-		  <div data-page="about" class="page cached">
-            <div class="page-content">
-              <div class="content-block">
-
-              </div>
-            <div class="content-block">
-                
-              </div></div>
-			  
-          </div>
-		  
-		  <div data-page="form" class="page cached">
-            <div class="page-content">
-             
-            </div>
-          </div>
-		  <div data-page="search" class="page cached">
-					 <!-- Search Bar -->
-			<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
-				<div class="searchbar-input">
-					<input type="search" placeholder="Search">
-					<a href="#" class="searchbar-clear"></a>
-				</div>
-				<a href="#" class="searchbar-cancel">Cancel</a>
-			</form>
-			
-			<!-- Search Bar overlay-->
-			<div class="searchbar-overlay"></div>
-			
-			<!-- Page content -->
-			<div class="page-content">
-				<div class="content-block searchbar-not-found">
-						Nothing found
-				</div>
-		 
-				<div class="list-block list-block-search searchbar-found">
-					<ul class="searchList">
-						
-
-
-					</ul>
-				</div>
-			</div>
-            <div class="page-content">
-            </div>
-          </div></div>
-        <!-- Bottom Toolbar-->
-        
+            <!-- Bottom Toolbar-->
+         </div>
       </div>
-    </div>
-    <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="./randomflix_files/framework7.min.js"></script>
-    <!-- Path to your app js-->
-    <script type="text/javascript" src="./randomflix_files/my-app.js"></script>
-	<script>
-	Storage.prototype.setObj = function(key, obj) {
-    return this.setItem(key, JSON.stringify(obj))
-}
-Storage.prototype.getObj = function(key) {
-    return JSON.parse(this.getItem(key))
-}
-	</script>
-	<script>
-	function generate(){
-		var myApp = new Framework7();
-		console.log("Running generate..");
-		var iframe = document.createElement('iframe');
-		iframe.id = 'iframe3';
-		iframe.style.display = 'none';
-		document.body.appendChild(iframe);
-		iframe.src = 'showtitles.txt';
-		var iframe = document.getElementById('iframe3');
-        	setTimeout(function(){
-			file=document.getElementById('iframe3').contentDocument.body.firstChild.innerHTML;
-			file=file.split("\n");
-			for(i=0;i<file.length;i++){
-				currentShow=file[i].split("($)");
-				currentTitle= currentShow[0];
-				currentID=currentShow[1];
-				//console.log(currentTitle);
-				$(".navbar").append('<div data-page="'+currentID+'" class="navbar-inner cached"><div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="#" onclick="replace(this);" id="'+currentID+'" name="'+currentTitle+'" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div><div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">'+currentTitle+'</div><div class="right"><!-- Right link contains only icon - additional "icon-only" class--><a href="#'+currentID+'" id="'+currentTitle+'" onclick="addFavorite(this);" class="link"><p>Add To Favorites</p></a></div></div>');
-				
-				$(".test").append('<div data-page="'+currentID+'" class="page cached"><div class="page-content"><center><h1>'+currentTitle+'</h1><BR><p><a href="#" id="'+currentID+'" onclick="pickrandom(this);" class="button button-round active">Play Random Episode</a></p><BR><h1 id="title"></h1><p id="plot"></p><a id="nlink" href="#"></a></div></center></div>');
-				$( ".searchList" ).append( '<li id="'+currentID+'"><a href="#'+currentID+'" class="item-link item-content"><div class="item-inner"><div class="item-title">'+currentTitle+'</div></div></a></li>');
-			}
-			console.log("Generate Complete");
-        	}, 1000);
-        	myApp.showIndicator();
-    		setTimeout(function () {
-        		myApp.hideIndicator();
-    		}, 4000);
-	}
-	</script>
-	<script>
-	function replace(ele){
-		var currentID = ele.id;
-		var currentTitle = ele.name;
-		$(".navbar").append('<div data-page="'+currentID+'" class="navbar-inner cached"><div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="#" onclick="replace(this);" id="'+currentID+'" name="'+currentTitle+'" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div><div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">'+currentTitle+'</div><div class="right"><!-- Right link contains only icon - additional "icon-only" class--><a href="#'+currentID+'" id="'+currentTitle+'" onclick="addFavorite(this);" class="link"><p>Add To Favorites</p></a></div></div>');
-		$(".test").append('<div data-page="'+currentID+'" class="page cached"><div class="page-content"><center><h1>'+currentTitle+'</h1><BR><p><a href="#" id="'+currentID+'" onclick="pickrandom(this);" class="button button-round active">Play Random Episode</a></p><BR><h1 id="title"></h1><p id="plot"></p><a id="nlink" href="#"></a></div></center></div>');
-	}
-	</script>
-	<script>
-	var myApp = new Framework7();
-	$(document).ready(function(){
-		var favoriteID=localStorage.getObj("favoriteID");
-		var favoriteName=localStorage.getObj("favoriteName");
-		$( ".favorites" ).empty();
-		try{
-			for(i=0;i<favoriteID.length;i++){
-				$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
-			}
-		}
-		catch(err){
-			console.log(err);
-		}
-		finally{
-			generate();	
-		}
-	})
-	</script>
-	
-	<script>
-	var myApp = new Framework7();
-	$( ".link" ).click(function() {
-	  var clickedID =String(jQuery(this).attr("href"));
-	  var contentPanelId = jQuery(this).attr("id");
-	  var clickedName=String(jQuery(this).attr("id"));
-	  clickedID =clickedID.slice(1,clickedID.length);
-	  console.log(clickedID);
-	  console.log(clickedName);
-	  console.log(!isNaN(clickedID));
-	  if(!isNaN(clickedID) && clickedID!=""){
-	  	myApp.showIndicator();
-		try{
-			var favoriteID=localStorage.getObj("favoriteID");
-			var favoriteName=localStorage.getObj("favoriteName");
-			if($.inArray(clickedID, favoriteID)!=-1){
-				console.log("already in array.")
-				myApp.hideIndicator();
-				myApp.alert('Please try adding another title.', 'This title is already in your favorites!');
-			}
-			else{
-				favoriteID.push(clickedID);
-				favoriteName.push(clickedName);
-				localStorage.setObj("favoriteID", favoriteID);
-				localStorage.setObj("favoriteName", favoriteName);
-				console.log("Pushed before, add new favorite.");
-				myApp.hideIndicator();
-				myApp.alert('This title has been added to your favorites!','Success!');
-			}
-		}
-		catch(err){
-			console.log("Never pushed before");
-			var favoriteID=[clickedID];
-			var favoriteName=[clickedName];
-			localStorage.setObj("favoriteID", favoriteID);
-			localStorage.setObj("favoriteName", favoriteName);
-			myApp.hideIndicator();
-			myApp.alert('This title has been added to your favorites!','Success!');
-		}
-		var favoriteID=localStorage.getObj("favoriteID");
-		var favoriteName=localStorage.getObj("favoriteName");
-		$( ".favorites" ).empty();
-		for(i=0;i<favoriteID.length;i++){
-			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
-		}
-	  }
-	});
-	</script>
-	<script>
-	function addFavorite(ele){
-	  var myApp = new Framework7();
-	  var clickedID =String(jQuery(ele).attr("href"));
-	  var contentPanelId = jQuery(ele).attr("id");
-	  var clickedName=String(jQuery(ele).attr("id"));
-	  clickedID =clickedID.slice(1,clickedID.length);
-	  console.log(clickedID);
-	  console.log(clickedName);
-	  console.log(!isNaN(clickedID));
-	  if(!isNaN(clickedID) && clickedID!=""){
-		try{
-			var favoriteID=localStorage.getObj("favoriteID");
-			var favoriteName=localStorage.getObj("favoriteName");
-			if($.inArray(clickedID, favoriteID)!=-1){
-				console.log("already in array.")
-				myApp.alert('Please try adding another title.', 'This title is already in your favorites!');
-			}
-			else{
-				favoriteID.push(clickedID);
-				favoriteName.push(clickedName);
-				localStorage.setObj("favoriteID", favoriteID);
-				localStorage.setObj("favoriteName", favoriteName);
-				console.log("Pushed before, add new favorite.");
-				myApp.alert('This title has been added to your favorites!','Success!');
-			}
-		}
-		catch(err){
-			console.log("Never pushed before");
-			var favoriteID=[clickedID];
-			var favoriteName=[clickedName];
-			localStorage.setObj("favoriteID", favoriteID);
-			localStorage.setObj("favoriteName", favoriteName);
-			myApp.alert('This title has been added to your favorites!','Success!');
-		}
-		var favoriteID=localStorage.getObj("favoriteID");
-		var favoriteName=localStorage.getObj("favoriteName");
-		$( ".favorites" ).empty();
-		for(i=0;i<favoriteID.length;i++){
-			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
-		}
-	  }
-	}
-	</script>
-	<script>
-  	function pickrandom(ele) {
-		console.log("pressed");
-		//var myApp = new Framework7();
-		//myApp.showIndicator();
-  		$("#iframe2").remove();
-  		var elid=ele.id;
-		var div = $( ele ).parent();
-		div = $( div ).parent();
-		var title =$(div).children('h1')[1];
-		var link =$(div).children('a')[0];
-		var plot =$(div).children('p')[1];
-		$(title).text("Loading...");
-		$(plot).text("Please Wait...");
-		$(link).text("");
-		console.log(title);
-		var iframe = document.createElement('iframe');
-		iframe.id = 'iframe2';
-		iframe.style.display = 'none';
-		document.body.appendChild(iframe);
-		iframe.src = 'showepisodedatabase/'+elid+'.json';
-		var iframe = document.getElementById('iframe2');
-        setTimeout(function(){
-			file=document.getElementById('iframe2').contentDocument.body.firstChild.innerHTML;
-			file =JSON.parse(file);
-			var seasons=file["video"]["seasons"];
-			var  arrayLength=seasons.length;
-		    var count=[];
-		    for (var i = 0; i < arrayLength; i++) {
-				count.push(seasons[i]["episodes"].length);
-		    }
-		    var randseason=Math.floor((Math.random() * count.length));
-		    var episodescount = count[randseason];
-		    var randepisode=Math.floor((Math.random() * episodescount)+1);
-		    var chosene=seasons[randseason]["episodes"][randepisode];
-			try{
-				console.log("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
-				console.log(chosene.title);
-				console.log(chosene.synopsis);
-				$(title).text(chosene.title);
-				$(plot).text(chosene.synopsis);
-				//location.href = "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id;
-				$(link).addClass("external");
-				$(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
-				$(link).text("Click to open episode")
-			}
-			catch(err){
-				$(title).text("ERROR");
-				$(plot).text("Please Try Again");
-			}
-        }, 1000);
-  }
-  </script>
-  
-</body></html>
+      <!-- Path to Framework7 Library JS-->
+      <script type="text/javascript" src="./randomflix_files/framework7.min.js"></script>
+      <!-- Path to your app js-->
+      <script type="text/javascript" src="./randomflix_files/my-app.js"></script>
+      <script>
+         Storage.prototype.setObj = function(key, obj) {
+            return this.setItem(key, JSON.stringify(obj))
+         }
+         Storage.prototype.getObj = function(key) {
+            return JSON.parse(this.getItem(key))
+         }
+      </script>
+      <script>
+         function generate(){
+         	var myApp = localStorage.getObj("frame7");
+         	console.log("Running generate..");
+         	var iframe = document.createElement('iframe');
+         	iframe.id = 'iframe3';
+         	iframe.style.display = 'none';
+         	document.body.appendChild(iframe);
+         	iframe.src = 'showtitles.txt';
+         	var iframe = document.getElementById('iframe3');
+                	setTimeout(function(){
+         		file=document.getElementById('iframe3').contentDocument.body.firstChild.innerHTML;
+         		file=file.split("\n");
+         		for(i=0;i<file.length;i++){
+         			currentShow=file[i].split("($)");
+         			currentTitle= currentShow[0];
+         			currentID=currentShow[1];
+         			//console.log(currentTitle);
+         			$(".navbar").append('<div data-page="'+currentID+'" class="navbar-inner cached"><div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="#" onclick="replace(this);" id="'+currentID+'" name="'+currentTitle+'" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div><div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">'+currentTitle+'</div><div class="right"><!-- Right link contains only icon - additional "icon-only" class--><a href="#'+currentID+'" id="'+currentTitle+'" onclick="addFavorite(this);" class="link"><p>Add To Favorites</p></a></div></div>');
+         			
+         			$(".test").append('<div data-page="'+currentID+'" class="page cached"><div class="page-content"><center><h1>'+currentTitle+'</h1><BR><p><a href="#" id="'+currentID+'" onclick="pickrandom(this);" class="button button-round active">Play Random Episode</a></p><BR><h1 id="title"></h1><p id="plot"></p><a id="nlink" href="#"></a></div></center></div>');
+         			$( ".searchList" ).append( '<li id="'+currentID+'"><a href="#'+currentID+'" class="item-link item-content"><div class="item-inner"><div class="item-title">'+currentTitle+'</div></div></a></li>');
+         		}
+         		console.log("Generate Complete");
+                	}, 1000);
+                	myApp.showIndicator();
+            		setTimeout(function () {
+                		myApp.hideIndicator();
+            		}, 4000);
+         }
+      </script>
+      <script>
+         function replace(ele){
+         	var currentID = ele.id;
+         	var currentTitle = ele.name;
+         	$(".navbar").append('<div data-page="'+currentID+'" class="navbar-inner cached"><div class="left sliding" style="transform: translate3d(123.5px, 0px, 0px);"><a href="#" onclick="replace(this);" id="'+currentID+'" name="'+currentTitle+'" class="back link"> <i class="icon icon-back" style="transform: translate3d(-123.5px, 0px, 0px);"></i><span class="">Back</span></a></div><div class="center sliding" style="left: -131px; transform: translate3d(131px, 0px, 0px);">'+currentTitle+'</div><div class="right"><!-- Right link contains only icon - additional "icon-only" class--><a href="#'+currentID+'" id="'+currentTitle+'" onclick="addFavorite(this);" class="link"><p>Add To Favorites</p></a></div></div>');
+         	$(".test").append('<div data-page="'+currentID+'" class="page cached"><div class="page-content"><center><h1>'+currentTitle+'</h1><BR><p><a href="#" id="'+currentID+'" onclick="pickrandom(this);" class="button button-round active">Play Random Episode</a></p><BR><h1 id="title"></h1><p id="plot"></p><a id="nlink" href="#"></a></div></center></div>');
+         }
+      </script>
+      <script>
+         //var myApp = new Framework7();
+         $(document).ready(function(){
+         	try{
+         		var myApp = localStorage.getObj("frame7");
+         	}
+         	catch(err){
+         		var myApp = new Framework7();
+         		localStorage.setObj("frame7", myApp);
+         	}
+         	var favoriteID=localStorage.getObj("favoriteID");
+         	var favoriteName=localStorage.getObj("favoriteName");
+         	$( ".favorites" ).empty();
+         	try{
+         		for(i=0;i<favoriteID.length;i++){
+         			$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
+         		}
+         	}
+         	catch(err){
+         		console.log(err);
+         	}
+         	finally{
+         		generate();	
+         	}
+         })
+      </script>
+      <script>
+         var myApp = localStorage.getObj("frame7");
+         $( ".link" ).click(function() {
+           var currEle = jQuery(this);
+           var clickedID =String(currEle.attr("href"));
+           var clickedName=String(currEle.attr("id"));
+           clickedID =clickedID.slice(1,clickedID.length);
+           console.log(clickedID);
+           console.log(clickedName);
+           console.log(!isNaN(clickedID));
+           if(!isNaN(clickedID) && clickedID!=""){
+           	myApp.showIndicator();
+         	try{
+         		var favoriteID=localStorage.getObj("favoriteID");
+         		var favoriteName=localStorage.getObj("favoriteName");
+         		if($.inArray(clickedID, favoriteID)!=-1){
+         			console.log("already in array.")
+         			myApp.hideIndicator();
+         			myApp.alert('Please try adding another title.', 'This title is already in your favorites!');
+         		}
+         		else{
+         			favoriteID.push(clickedID);
+         			favoriteName.push(clickedName);
+         			localStorage.setObj("favoriteID", favoriteID);
+         			localStorage.setObj("favoriteName", favoriteName);
+         			console.log("Pushed before, add new favorite.");
+         			myApp.hideIndicator();
+         			myApp.alert('This title has been added to your favorites!','Success!');
+         		}
+         	}
+         	catch(err){
+         		console.log("Never pushed before");
+         		var favoriteID=[clickedID];
+         		var favoriteName=[clickedName];
+         		localStorage.setObj("favoriteID", favoriteID);
+         		localStorage.setObj("favoriteName", favoriteName);
+         		myApp.hideIndicator();
+         		myApp.alert('This title has been added to your favorites!','Success!');
+         	}
+         	var favoriteID=localStorage.getObj("favoriteID");
+         	var favoriteName=localStorage.getObj("favoriteName");
+         	$( ".favorites" ).empty();
+         	for(i=0;i<favoriteID.length;i++){
+         		$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
+         	}
+           }
+         });
+      </script>
+      <script>
+         function addFavorite(ele){
+           var myApp = localStorage.getObj("frame7");
+           var clickedID =String(jQuery(ele).attr("href"));
+           var contentPanelId = jQuery(ele).attr("id");
+           var clickedName=String(jQuery(ele).attr("id"));
+           clickedID =clickedID.slice(1,clickedID.length);
+           console.log(clickedID);
+           console.log(clickedName);
+           console.log(!isNaN(clickedID));
+           if(!isNaN(clickedID) && clickedID!=""){
+         	try{
+         		var favoriteID=localStorage.getObj("favoriteID");
+         		var favoriteName=localStorage.getObj("favoriteName");
+         		if($.inArray(clickedID, favoriteID)!=-1){
+         			console.log("already in array.")
+         			myApp.alert('Please try adding another title.', 'This title is already in your favorites!');
+         		}
+         		else{
+         			favoriteID.push(clickedID);
+         			favoriteName.push(clickedName);
+         			localStorage.setObj("favoriteID", favoriteID);
+         			localStorage.setObj("favoriteName", favoriteName);
+         			console.log("Pushed before, add new favorite.");
+         			myApp.alert('This title has been added to your favorites!','Success!');
+         		}
+         	}
+         	catch(err){
+         		console.log("Never pushed before");
+         		var favoriteID=[clickedID];
+         		var favoriteName=[clickedName];
+         		localStorage.setObj("favoriteID", favoriteID);
+         		localStorage.setObj("favoriteName", favoriteName);
+         		myApp.alert('This title has been added to your favorites!','Success!');
+         	}
+         	var favoriteID=localStorage.getObj("favoriteID");
+         	var favoriteName=localStorage.getObj("favoriteName");
+         	$( ".favorites" ).empty();
+         	for(i=0;i<favoriteID.length;i++){
+         		$( ".favorites" ).append( '<li class="swipeout"><a href="#'+favoriteID[i]+'" class="item-link"><div class="swipeout-content item-content"><div class="item-inner"> <div class="item-title">'+favoriteName[i]+'</div></div></div></a><div class="swipeout-actions-right"> <a href="#" class="swipeout-delete">Delete</a></div></li>' );
+         	}
+           }
+         }
+      </script>
+      <script>
+         function pickrandom(ele) {
+         console.log("pressed");
+         //var myApp = new Framework7();
+         //myApp.showIndicator();
+         	$("#iframe2").remove();
+         	var elid=ele.id;
+         var div = $( ele ).parent();
+         div = $( div ).parent();
+         var title =$(div).children('h1')[1];
+         var link =$(div).children('a')[0];
+         var plot =$(div).children('p')[1];
+         $(title).text("Loading...");
+         $(plot).text("Please Wait...");
+         $(link).text("");
+         console.log(title);
+         var iframe = document.createElement('iframe');
+         iframe.id = 'iframe2';
+         iframe.style.display = 'none';
+         document.body.appendChild(iframe);
+         iframe.src = 'showepisodedatabase/'+elid+'.json';
+         var iframe = document.getElementById('iframe2');
+              setTimeout(function(){
+         file=document.getElementById('iframe2').contentDocument.body.firstChild.innerHTML;
+         file =JSON.parse(file);
+         var seasons=file["video"]["seasons"];
+         var  arrayLength=seasons.length;
+            var count=[];
+            for (var i = 0; i < arrayLength; i++) {
+         	count.push(seasons[i]["episodes"].length);
+            }
+            var randseason=Math.floor((Math.random() * count.length));
+            var episodescount = count[randseason];
+            var randepisode=Math.floor((Math.random() * episodescount)+1);
+            var chosene=seasons[randseason]["episodes"][randepisode];
+         try{
+         	console.log("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
+         	console.log(chosene.title);
+         	console.log(chosene.synopsis);
+         	$(title).text(chosene.title);
+         	$(plot).text(chosene.synopsis);
+         	//location.href = "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id;
+         	$(link).addClass("external");
+         	$(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
+         	$(link).text("Click to open episode")
+         }
+         catch(err){
+         	$(title).text("ERROR");
+         	$(plot).text("Please Try Again");
+         }
+              }, 1000);
+         }
+      </script>
+   </body>
+</html>
