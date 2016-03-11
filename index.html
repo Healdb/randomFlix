@@ -173,9 +173,11 @@
          	var myApp = localStorage.getObj("frame7");
          	if(myApp==null){
          	   console.log("Never visited before.");
-         		var myApp = new Framework7();
+         		myApp = new Framework7();
+         		console.log(myApp);
          		localStorage.setObj("frame7", myApp);
          	}
+         	console.log(myApp);
          	var favoriteID=localStorage.getObj("favoriteID");
          	var favoriteName=localStorage.getObj("favoriteName");
          	$( ".favorites" ).empty();
