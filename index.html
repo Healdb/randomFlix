@@ -129,8 +129,7 @@
          }
       </script>
       <script>
-         function generate(){
-         	var myApp = localStorage.getObj("frame7");
+         function generate(myApp){
          	console.log("Running generate..");
          	var iframe = document.createElement('iframe');
          	iframe.id = 'iframe3';
@@ -170,15 +169,7 @@
       <script>
          //var myApp = new Framework7();
          $(document).ready(function(){
-         	var myApp = localStorage.getObj("frame7");
-         	if(myApp==null){
-         	   console.log("Never visited before.");
-         		myApp = new Framework7();
-         		console.log(myApp);
-         		localStorage.setObj("frame7", myApp);
-         	}
-         	myApp = localStorage.getObj("frame7");
-         	console.log(myApp);
+         	var myApp = new Framework7();
          	var favoriteID=localStorage.getObj("favoriteID");
          	var favoriteName=localStorage.getObj("favoriteName");
          	$( ".favorites" ).empty();
@@ -191,13 +182,13 @@
          		console.log(err);
          	}
          	finally{
-         		generate();	
+         		generate(myApp);	
          	}
          })
       </script>
       <script>
          function addFavorite(ele){
-           var myApp = localStorage.getObj("frame7");
+           var myApp = new Framework7();
            var currEle = jQuery(ele);
            var clickedID =String(currEle.attr("href"));
            var clickedName=String(currEle.attr("id"));
