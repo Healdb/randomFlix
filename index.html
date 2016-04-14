@@ -266,14 +266,14 @@
             var randepisode=Math.floor((Math.random() * episodescount)+1);
             var chosene=seasons[randseason]["episodes"][randepisode];
          try{
-         	console.log("nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id);
+         	console.log("nflx://www.netflix.com/watch/"+chosene.id+"?");
          	console.log(chosene.title);
          	console.log(chosene.synopsis);
          	$(title).text(chosene.title);
          	$(plot).text(chosene.synopsis);
          	//location.href = "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id;
          	$(link).addClass("external");
-         	$(link).attr("href", "nflx://www.netflix.com/Browse?q=action%3Dplay%26movieid%3D"+chosene.id)
+         	$(link).attr("href", "nflx://www.netflix.com/watch/"+chosene.id+"?")
          	$(link).text("Click to open episode")
          }
          catch(err){
